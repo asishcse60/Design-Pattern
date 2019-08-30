@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D0D9D07A-1298-4D1D-8462-4ED2CC45CB43}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>ObjectOrientedDesignPattern</RootNamespace>
+    <AssemblyName>ObjectOrientedDesignPattern</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdapterPattern\AudioPlayer.cs" />
+    <Compile Include="AdapterPattern\MediaAdapter.cs" />
+    <Compile Include="AdapterPattern\Mp4Player.cs" />
+    <Compile Include="AdapterPattern\VlcPlayer.cs" />
+    <Compile Include="Command\DeviceButton.cs" />
+    <Compile Include="Command\Interface\ICommand.cs" />
+    <Compile Include="Command\Interface\IElectronicDevice.cs" />
+    <Compile Include="Command\Television.cs" />
+    <Compile Include="Command\TurnTvOff.cs" />
+    <Compile Include="Command\TurnTVOn.cs" />
+    <Compile Include="Command\TvVolumeDown.cs" />
+    <Compile Include="Command\TvVolumeUp.cs" />
+    <Compile Include="Composite\Interface\IEmployee.cs" />
+    <Compile Include="Composite\Leaf\Employee.cs" />
+    <Compile Include="Composite\Manager.cs" />
+    <Compile Include="Decorator\DecoratorComponent\CarDecorator.cs" />
+    <Compile Include="Decorator\DecoratorComponent\OfferConcreateDecorator.cs" />
+    <Compile Include="Decorator\Hunday.cs" />
+    <Compile Include="Decorator\Interface\ICar.cs" />
+    <Compile Include="Decorator\Suzuki.cs" />
+    <Compile Include="Facade\Address.cs" />
+    <Compile Include="Facade\AddressDetails.cs" />
+    <Compile Include="Facade\Cart.cs" />
+    <Compile Include="Facade\CartItem.cs" />
+    <Compile Include="Facade\IFacade\IUseOrder.cs" />
+    <Compile Include="Facade\Interface\IAddress.cs" />
+    <Compile Include="Facade\Interface\ICart.cs" />
+    <Compile Include="Facade\Interface\IOrder.cs" />
+    <Compile Include="Facade\Interface\ITax.cs" />
+    <Compile Include="Facade\Interface\IWallet.cs" />
+    <Compile Include="Facade\Order.cs" />
+    <Compile Include="Facade\Product.cs" />
+    <Compile Include="Facade\ShoppingCartDetails.cs" />
+    <Compile Include="Facade\Tax.cs" />
+    <Compile Include="Facade\UserOrder.cs" />
+    <Compile Include="Facade\Wallet.cs" />
+    <Compile Include="FlightFinder.cs" />
+    <Compile Include="FlightQueryBuilder.cs" />
+    <Compile Include="AdapterPattern\Interface\IAdvanceMediaPlayer.cs" />
+    <Compile Include="AdapterPattern\Interface\IMediaPlayer.cs" />
+    <Compile Include="LoadBalancer.cs" />
+    <Compile Include="MotorCycleBuilder.cs" />
+    <Compile Include="Observer\Interface\IObserver.cs" />
+    <Compile Include="Observer\Interface\ISubject.cs" />
+    <Compile Include="Observer\StockGrabber.cs" />
+    <Compile Include="Observer\StockObserver.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Strategy\Bus.cs" />
+    <Compile Include="Strategy\Car.cs" />
+    <Compile Include="Strategy\Plane.cs" />
+    <Compile Include="Strategy\TravelPlanner.cs" />
+    <Compile Include="Strategy\TravelStrategy.cs" />
+    <Compile Include="Template\BasePizzaStore.cs" />
+    <Compile Include="Template\Interface\IPizza.cs" />
+    <Compile Include="Template\SingaporeStylePizzaStore.cs" />
+    <Compile Include="VehicleBuilder.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

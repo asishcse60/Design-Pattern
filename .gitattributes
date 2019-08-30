@@ -1,0 +1,4 @@
+* linguist-vendored
+*.cs linguist-vendored=false
+$ cat .gitattributes
+*.rb linguist-language=C#
